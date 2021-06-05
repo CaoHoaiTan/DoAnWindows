@@ -68,7 +68,7 @@ namespace QuanLyKhachSan
             new NhanVienModel().insert(nv);
             MessageBox.Show("Thành Công");
             grcNhanVien.RefreshDataSource();
-            NhanVienForm_Load(sender, e);
+            DataBindings();
         }
 
         private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace QuanLyKhachSan
                 new NhanVienModel().delete(nv);
                 MessageBox.Show("Thành Công");
                 grcNhanVien.RefreshDataSource();
-                NhanVienForm_Load(sender, e);
+                DataBindings();
             }
         }
 
@@ -95,7 +95,7 @@ namespace QuanLyKhachSan
         {
             //Update
             NhanVien nv = new NhanVien();
-            nv.NhanVienId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NhanVienId").ToString());
+           // nv.NhanVienId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NhanVienId").ToString());
             nv.TenNV = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TenNV").ToString();
             nv.DiaChi = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DiaChi").ToString();
             nv.NgaySinh = DateTime.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NgaySinh").ToString());
@@ -105,7 +105,7 @@ namespace QuanLyKhachSan
             new NhanVienModel().Update(nv);
             MessageBox.Show("Thành Công");
             grcNhanVien.RefreshDataSource();
-            NhanVienForm_Load(sender, e);
+            DataBindings();
         }
 
         private void gridControl1_ViewRegistered(object sender, DevExpress.XtraGrid.ViewOperationEventArgs e)
