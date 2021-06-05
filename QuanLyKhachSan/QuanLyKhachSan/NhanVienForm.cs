@@ -72,7 +72,8 @@ namespace QuanLyKhachSan
             NhanVien nv = new NhanVien();
             nv.TenNV = txtTenNV.Text;
             nv.DiaChi = txtDiaChi.Text;
-            nv.NhomNVId = int.Parse(cmbNhomNVId.SelectedValue.ToString());
+            if (cmbNhomNVId.SelectedValue != null) 
+                nv.NhomNVId = int.Parse(cmbNhomNVId.SelectedValue.ToString());
             nv.NgaySinh = DateTime.Parse(TimeNgaySinh.Text);
             // IsActive
             nv.IsActive = true;

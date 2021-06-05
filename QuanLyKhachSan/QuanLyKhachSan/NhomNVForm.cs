@@ -107,8 +107,10 @@ namespace QuanLyKhachSan
         {
             NhomNV nv = new NhomNV();
             nv.TenNhom = txtTenNhom.Text;
-            nv.TrNhomId = int.Parse(cmbTrNhomId.SelectedValue.ToString());
-            nv.CongViecId = int.Parse(cmbCVId.SelectedValue.ToString());
+            if (cmbTrNhomId.SelectedValue != null)
+                nv.TrNhomId = int.Parse(cmbTrNhomId.SelectedValue.ToString());
+            if (cmbCVId.SelectedValue != null)
+                nv.CongViecId = int.Parse(cmbCVId.SelectedValue.ToString());
     
             new NhomNVModel().insert(nv);
             MessageBox.Show("Thành Công");
