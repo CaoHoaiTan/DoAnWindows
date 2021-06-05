@@ -21,26 +21,26 @@ namespace QuanLyKhachSan
         }
         private new void DataBindings()
         {
-            gridControl1.DataSource = new NhanVienModel().FindAll();
+            grcNhanVien.DataSource = new NhanVienModel().FindAll();
             //
-            txtNhanVienId.DataBindings.Add("Text", db.nhanViens.ToList(), "NhanVienId");
-            txtTenNV.DataBindings.Add("Text", db.nhanViens.ToList(), "TenNV");
-            txtDiaChi.DataBindings.Add("Text", db.nhanViens.ToList(), "DiaChi");
-            TimeNgaySinh.DataBindings.Add("Text", db.nhanViens.ToList(), "NgaySinh");
-            checkBox1.DataBindings.Add("Text", db.nhanViens.ToList(), "IsActive");
-            txtNhomNVId.DataBindings.Add("Text", db.nhanViens.ToList(), "NhomNVId");
-        }
-        private void NhanVienForm_Load(object sender, EventArgs e)
-        {
-            DataBindings();
-            //gridControl1.DataSource = new NhanVienModel().FindAll();
-            ////
-            //txtNhanVienId.DataBindings.Add("Text",db.nhanViens.ToList(),"NhanVienId");
+            //txtNhanVienId.DataBindings.Add("Text", db.nhanViens.ToList(), "NhanVienId");
             //txtTenNV.DataBindings.Add("Text", db.nhanViens.ToList(), "TenNV");
             //txtDiaChi.DataBindings.Add("Text", db.nhanViens.ToList(), "DiaChi");
             //TimeNgaySinh.DataBindings.Add("Text", db.nhanViens.ToList(), "NgaySinh");
             //checkBox1.DataBindings.Add("Text", db.nhanViens.ToList(), "IsActive");
-            //txtNhomNVId.DataBindings.Add("Text", db.nhanViens.ToList(), "NhomNVId");
+            //
+            this.cmbNhomNVId.DataSource = db.NhomNVs.ToList();
+            this.cmbNhomNVId.DisplayMember = "TenNhom";
+            this.cmbNhomNVId.ValueMember = "NhomNVId";
+
+            //
+            this.btnInsert.Enabled = true;
+            this.btnSave.Enabled = false;
+        }
+        private void NhanVienForm_Load(object sender, EventArgs e)
+        {
+            DataBindings();
+            
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -49,9 +49,11 @@ namespace QuanLyKhachSan
             txtNhanVienId.Enabled = false;
             txtTenNV.Text = "";
             txtDiaChi.Text = "";
-            txtNhomNVId.Text = "";
+            //cmbNhomNVId.Text = "";
             //
             txtTenNV.Focus();
+            this.btnInsert.Enabled = false;
+            this.btnSave.Enabled = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -59,13 +61,13 @@ namespace QuanLyKhachSan
             NhanVien nv = new NhanVien();
             nv.TenNV = txtTenNV.Text;
             nv.DiaChi = txtDiaChi.Text;
-            nv.NhomNVId = int.Parse(txtNhomNVId.Text);
+            nv.NhomNVId = int.Parse(cmbNhomNVId.SelectedValue.ToString());
             nv.NgaySinh = DateTime.Parse(TimeNgaySinh.Text);
             // IsActive
             nv.IsActive = true;
             new NhanVienModel().insert(nv);
             MessageBox.Show("Thành Công");
-            gridControl1.RefreshDataSource();
+            grcNhanVien.RefreshDataSource();
             NhanVienForm_Load(sender, e);
         }
 
@@ -84,7 +86,7 @@ namespace QuanLyKhachSan
                 //thực hienj hàm xóa
                 new NhanVienModel().delete(nv);
                 MessageBox.Show("Thành Công");
-                gridControl1.RefreshDataSource();
+                grcNhanVien.RefreshDataSource();
                 NhanVienForm_Load(sender, e);
             }
         }
@@ -102,8 +104,13 @@ namespace QuanLyKhachSan
             //
             new NhanVienModel().Update(nv);
             MessageBox.Show("Thành Công");
-            gridControl1.RefreshDataSource();
+            grcNhanVien.RefreshDataSource();
             NhanVienForm_Load(sender, e);
+        }
+
+        private void gridControl1_ViewRegistered(object sender, DevExpress.XtraGrid.ViewOperationEventArgs e)
+        {
+            
         }
     }
 }
