@@ -48,7 +48,6 @@ namespace QuanLyKhachSan
             this.LookupNhomNV = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbNhomNVId = new System.Windows.Forms.ComboBox();
-            this.nhomNVBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -61,6 +60,7 @@ namespace QuanLyKhachSan
             this.label2 = new System.Windows.Forms.Label();
             this.txtNhanVienId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.nhomNVBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grcNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -248,10 +248,9 @@ namespace QuanLyKhachSan
             // cmbNhomNVId
             // 
             this.cmbNhomNVId.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.nhanVienBindingSource, "NhomNV", true));
-            this.cmbNhomNVId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhomNVBindingSource, "NhomNVId", true));
             this.cmbNhomNVId.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.nhanVienBindingSource, "NhomNVId", true));
             this.cmbNhomNVId.DataSource = this.nhomNVBindingSource;
-            this.cmbNhomNVId.DisplayMember = "NhomNVId";
+            this.cmbNhomNVId.DisplayMember = "TenNhom";
             this.cmbNhomNVId.FormattingEnabled = true;
             this.cmbNhomNVId.Location = new System.Drawing.Point(636, 23);
             this.cmbNhomNVId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -259,10 +258,7 @@ namespace QuanLyKhachSan
             this.cmbNhomNVId.Size = new System.Drawing.Size(104, 21);
             this.cmbNhomNVId.TabIndex = 5;
             this.cmbNhomNVId.ValueMember = "NhomNVId";
-            // 
-            // nhomNVBindingSource
-            // 
-            this.nhomNVBindingSource.DataSource = this.nhanVienBindingSource;
+            this.cmbNhomNVId.SelectedIndexChanged += new System.EventHandler(this.cmbNhomNVId_SelectedIndexChanged);
             // 
             // btnSave
             // 
@@ -379,6 +375,10 @@ namespace QuanLyKhachSan
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "NhanVienId";
+            // 
+            // nhomNVBindingSource
+            // 
+            this.nhomNVBindingSource.DataSource = typeof(QuanLyKhachSan.Models.NhomNV);
             // 
             // NhanVienForm
             // 

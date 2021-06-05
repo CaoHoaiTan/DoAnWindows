@@ -40,7 +40,10 @@ namespace QuanLyKhachSan
 
         private void NhomNVForm_Load(object sender, EventArgs e)
         {
-            DataBindings();
+            //DataBindings();
+            nhomNVBindingSource.DataSource = new NhomNVModel().FindAll();
+            congViecBindingSource.DataSource = new CongViecModel().FindAll();
+            nhanVienBindingSource.DataSource = new NhanVienModel().FindAll();
         }
 
         private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)

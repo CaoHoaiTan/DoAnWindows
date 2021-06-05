@@ -113,5 +113,15 @@ namespace QuanLyKhachSan
         {
             
         }
+
+        private void cmbNhomNVId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nhomNVBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
