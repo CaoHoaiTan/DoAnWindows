@@ -21,7 +21,9 @@ namespace QuanLyKhachSan
         }
         private new void DataBindings()
         {
-            grcNhanVien.DataSource = new NhanVienModel().FindAll();
+            //grcNhanVien.DataSource = new NhanVienModel().FindAll();
+            nhanVienBindingSource.DataSource = new NhanVienModel().FindAll();
+            nhomNVBindingSource.DataSource = new NhomNVModel().FindAll();
             //
             //txtNhanVienId.DataBindings.Add("Text", db.nhanViens.ToList(), "NhanVienId");
             //txtTenNV.DataBindings.Add("Text", db.nhanViens.ToList(), "TenNV");
@@ -39,17 +41,22 @@ namespace QuanLyKhachSan
         }
         private void NhanVienForm_Load(object sender, EventArgs e)
         {
-            //DataBindings();
-            nhanVienBindingSource.DataSource = new NhanVienModel().FindAll();
-            nhomNVBindingSource.DataSource = new NhomNVModel().FindAll();
+            DataBindings();
+           
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
             //
+            txtNhanVienId.Text = "";
             txtNhanVienId.Enabled = false;
+            txtNhanVienId.DataBindings.Clear();
             txtTenNV.Text = "";
+            txtTenNV.DataBindings.Clear();
             txtDiaChi.Text = "";
+            txtDiaChi.DataBindings.Clear();
+            chkActice.DataBindings.Clear();
+            cmbNhomNVId.DataBindings.Clear();
             //cmbNhomNVId.Text = "";
             //
             txtTenNV.Focus();
@@ -96,7 +103,7 @@ namespace QuanLyKhachSan
         {
             //Update
             NhanVien nv = new NhanVien();
-           // nv.NhanVienId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NhanVienId").ToString());
+            nv.NhanVienId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NhanVienId").ToString());
             nv.TenNV = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TenNV").ToString();
             nv.DiaChi = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DiaChi").ToString();
             nv.NgaySinh = DateTime.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NgaySinh").ToString());

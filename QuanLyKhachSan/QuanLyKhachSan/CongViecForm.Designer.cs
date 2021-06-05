@@ -29,27 +29,30 @@ namespace QuanLyKhachSan
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CongViecForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.txtTenCV = new System.Windows.Forms.TextBox();
+            this.txtCVId = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.grcCongViec = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCVId = new System.Windows.Forms.TextBox();
-            this.txtTenCV = new System.Windows.Forms.TextBox();
             this.CongViecId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TenCV = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnUpdate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.congViecBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcCongViec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryUpdate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.congViecBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,8 +68,63 @@ namespace QuanLyKhachSan
             this.panel1.Size = new System.Drawing.Size(386, 189);
             this.panel1.TabIndex = 0;
             // 
+            // btnInsert
+            // 
+            this.btnInsert.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.ImageOptions.Image")));
+            this.btnInsert.Location = new System.Drawing.Point(150, 146);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(94, 29);
+            this.btnInsert.TabIndex = 2;
+            this.btnInsert.Text = "Thêm";
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.Location = new System.Drawing.Point(273, 146);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 29);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // txtTenCV
+            // 
+            this.txtTenCV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.congViecBindingSource, "TenCV", true));
+            this.txtTenCV.Location = new System.Drawing.Point(126, 104);
+            this.txtTenCV.Name = "txtTenCV";
+            this.txtTenCV.Size = new System.Drawing.Size(100, 23);
+            this.txtTenCV.TabIndex = 1;
+            // 
+            // txtCVId
+            // 
+            this.txtCVId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.congViecBindingSource, "CongViecId", true));
+            this.txtCVId.Location = new System.Drawing.Point(126, 25);
+            this.txtCVId.Name = "txtCVId";
+            this.txtCVId.Size = new System.Drawing.Size(100, 23);
+            this.txtCVId.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(25, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Tên CV";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CongViecId";
+            // 
             // grcCongViec
             // 
+            this.grcCongViec.DataSource = this.congViecBindingSource;
             this.grcCongViec.Location = new System.Drawing.Point(13, 208);
             this.grcCongViec.MainView = this.gridView1;
             this.grcCongViec.Name = "grcCongViec";
@@ -87,38 +145,7 @@ namespace QuanLyKhachSan
             this.btnUpdate});
             this.gridView1.GridControl = this.grcCongViec;
             this.gridView1.Name = "gridView1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CongViecId";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tên CV";
-            // 
-            // txtCVId
-            // 
-            this.txtCVId.Location = new System.Drawing.Point(126, 25);
-            this.txtCVId.Name = "txtCVId";
-            this.txtCVId.Size = new System.Drawing.Size(100, 23);
-            this.txtCVId.TabIndex = 1;
-            // 
-            // txtTenCV
-            // 
-            this.txtTenCV.Location = new System.Drawing.Point(126, 104);
-            this.txtTenCV.Name = "txtTenCV";
-            this.txtTenCV.Size = new System.Drawing.Size(100, 23);
-            this.txtTenCV.TabIndex = 1;
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             // 
             // CongViecId
             // 
@@ -139,26 +166,6 @@ namespace QuanLyKhachSan
             this.TenCV.Visible = true;
             this.TenCV.VisibleIndex = 1;
             this.TenCV.Width = 94;
-            // 
-            // btnSave
-            // 
-            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(273, 146);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 29);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnInsert
-            // 
-            this.btnInsert.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.btnInsert.Location = new System.Drawing.Point(150, 146);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(94, 29);
-            this.btnInsert.TabIndex = 2;
-            this.btnInsert.Text = "Thêm";
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnDelete
             // 
@@ -198,6 +205,10 @@ namespace QuanLyKhachSan
             this.repositoryUpdate.Name = "repositoryUpdate";
             this.repositoryUpdate.Click += new System.EventHandler(this.repositoryUpdate_Click);
             // 
+            // congViecBindingSource
+            // 
+            this.congViecBindingSource.DataSource = typeof(QuanLyKhachSan.Models.CongViec);
+            // 
             // CongViecForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -214,6 +225,7 @@ namespace QuanLyKhachSan
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryUpdate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.congViecBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,5 +247,6 @@ namespace QuanLyKhachSan
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryDelete;
         private DevExpress.XtraGrid.Columns.GridColumn btnUpdate;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryUpdate;
+        private System.Windows.Forms.BindingSource congViecBindingSource;
     }
 }

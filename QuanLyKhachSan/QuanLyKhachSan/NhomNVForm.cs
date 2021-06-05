@@ -21,16 +21,19 @@ namespace QuanLyKhachSan
         }
         private new void DataBindings()
         {
-            grcNhomNV.DataSource = new NhomNVModel().FindAll();
+            // grcNhomNV.DataSource = new NhomNVModel().FindAll();
+            nhomNVBindingSource.DataSource = new NhomNVModel().FindAll();
+            congViecBindingSource.DataSource = new CongViecModel().FindAll();
+            nhanVienBindingSource.DataSource = new NhanVienModel().FindAll();
             //
-            this.cmbCVId.DataSource = db.congViecs.ToList();
-            this.cmbCVId.DisplayMember = "TenCV";
-            this.cmbCVId.ValueMember = "CongViecId";
+            //this.cmbCVId.DataSource = db.congViecs.ToList();
+            //this.cmbCVId.DisplayMember = "TenCV";
+            //this.cmbCVId.ValueMember = "CongViecId";
 
-            //combo box trNhomid
-            this.cmbTrNhomId.DataSource = db.nhanViens.ToList();
-            this.cmbTrNhomId.DisplayMember = "TenNV";
-            this.cmbTrNhomId.ValueMember = "NhanVienId";
+            ////combo box trNhomid
+            //this.cmbTrNhomId.DataSource = db.nhanViens.ToList();
+            //this.cmbTrNhomId.DisplayMember = "TenNV";
+            //this.cmbTrNhomId.ValueMember = "NhanVienId";
             //
 
             
@@ -40,10 +43,8 @@ namespace QuanLyKhachSan
 
         private void NhomNVForm_Load(object sender, EventArgs e)
         {
-            //DataBindings();
-            nhomNVBindingSource.DataSource = new NhomNVModel().FindAll();
-            congViecBindingSource.DataSource = new CongViecModel().FindAll();
-            nhanVienBindingSource.DataSource = new NhanVienModel().FindAll();
+            DataBindings();
+            
         }
 
         private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
@@ -85,7 +86,13 @@ namespace QuanLyKhachSan
         {
             //
             txtNhomNVId.Enabled = false;
+            txtNhomNVId.Text = "";
             txtTenNhom.Text = "";
+            //
+            txtNhomNVId.DataBindings.Clear();
+            txtNhomNVId.DataBindings.Clear();
+            cmbCVId.DataBindings.Clear();
+            cmbTrNhomId.DataBindings.Clear();
            
             //cmbNhomNVId.Text = "";
             //

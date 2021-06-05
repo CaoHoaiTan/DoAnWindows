@@ -21,9 +21,9 @@ namespace QuanLyKhachSan
         }
         private new void DataBindings()
         {
-            grcCongViec.DataSource = new CongViecModel().FindAll();
-            
-           
+            //grcCongViec.DataSource = new CongViecModel().FindAll();
+            congViecBindingSource.DataSource = new CongViecModel().FindAll();
+            //
             this.btnInsert.Enabled = true;
             this.btnSave.Enabled = false;
         }
@@ -51,7 +51,7 @@ namespace QuanLyKhachSan
         {
             //Update
             CongViec cv = new CongViec();
-            // nv.NhanVienId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NhanVienId").ToString());
+            cv.CongViecId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "CongViecId").ToString());
             cv.TenCV = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TenCV").ToString();
            //
             new CongViecModel().Update(cv);
@@ -64,8 +64,11 @@ namespace QuanLyKhachSan
         {
             //
             txtCVId.Enabled = false;
+            txtCVId.Text = "";
             txtTenCV.Text = "";
             //cmbNhomNVId.Text = "";
+            txtCVId.DataBindings.Clear();
+            txtTenCV.DataBindings.Clear();
             //
             txtTenCV.Focus();
             this.btnInsert.Enabled = false;
@@ -79,6 +82,7 @@ namespace QuanLyKhachSan
             new CongViecModel().insert(cv);
             MessageBox.Show("Thành Công");
             grcCongViec.RefreshDataSource();
+            //
             DataBindings();
         }
 
