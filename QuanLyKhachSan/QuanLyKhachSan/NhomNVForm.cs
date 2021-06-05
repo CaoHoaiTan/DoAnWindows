@@ -84,18 +84,20 @@ namespace QuanLyKhachSan
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            //
-            txtNhomNVId.Enabled = false;
-            txtNhomNVId.Text = "";
-            txtTenNhom.Text = "";
-            //
-            txtNhomNVId.DataBindings.Clear();
-            txtNhomNVId.DataBindings.Clear();
-            cmbCVId.DataBindings.Clear();
-            cmbTrNhomId.DataBindings.Clear();
-           
-            //cmbNhomNVId.Text = "";
-            //
+            ////
+            //txtNhomNVId.Enabled = false;
+            //txtNhomNVId.Text = "";
+            //txtTenNhom.Text = "";
+            ////
+            //txtNhomNVId.DataBindings.Clear();
+            //txtNhomNVId.DataBindings.Clear();
+            //cmbCVId.DataBindings.Clear();
+            //cmbTrNhomId.DataBindings.Clear();
+
+            ////cmbNhomNVId.Text = "";
+            ////
+            nhomNVBindingSource.Add(new NhomNV());
+            nhomNVBindingSource.MoveLast();
             txtTenNhom.Focus();
             this.btnInsert.Enabled = false;
             this.btnSave.Enabled = true;

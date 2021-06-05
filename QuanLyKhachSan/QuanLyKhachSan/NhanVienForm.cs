@@ -25,15 +25,16 @@ namespace QuanLyKhachSan
             nhanVienBindingSource.DataSource = new NhanVienModel().FindAll();
             nhomNVBindingSource.DataSource = new NhomNVModel().FindAll();
             //
-            //txtNhanVienId.DataBindings.Add("Text", db.nhanViens.ToList(), "NhanVienId");
+            //txtNhanVienId.DataBindings.Add("Text", nhanVienBindingSource.DataSource, "NhanVienId");
             //txtTenNV.DataBindings.Add("Text", db.nhanViens.ToList(), "TenNV");
             //txtDiaChi.DataBindings.Add("Text", db.nhanViens.ToList(), "DiaChi");
             //TimeNgaySinh.DataBindings.Add("Text", db.nhanViens.ToList(), "NgaySinh");
             //checkBox1.DataBindings.Add("Text", db.nhanViens.ToList(), "IsActive");
             //
-            this.cmbNhomNVId.DataSource = db.NhomNVs.ToList();
-            this.cmbNhomNVId.DisplayMember = "TenNhom";
-            this.cmbNhomNVId.ValueMember = "NhomNVId";
+            //this.cmbNhomNVId.DataSource = nhomNVBindingSource.DataSource;
+            //this.cmbNhomNVId.DisplayMember = "TenNhom";
+            //this.cmbNhomNVId.ValueMember = "NhomNVId";
+
 
             //
             this.btnInsert.Enabled = true;
@@ -48,17 +49,19 @@ namespace QuanLyKhachSan
         private void btnInsert_Click(object sender, EventArgs e)
         {
             //
-            txtNhanVienId.Text = "";
-            txtNhanVienId.Enabled = false;
-            txtNhanVienId.DataBindings.Clear();
-            txtTenNV.Text = "";
-            txtTenNV.DataBindings.Clear();
-            txtDiaChi.Text = "";
-            txtDiaChi.DataBindings.Clear();
-            chkActice.DataBindings.Clear();
-            cmbNhomNVId.DataBindings.Clear();
+            //txtNhanVienId.Text = "";
+            //txtNhanVienId.Enabled = false;
+            //txtNhanVienId.DataBindings.Clear();
+            //txtTenNV.Text = "";
+            //txtTenNV.DataBindings.Clear();
+            //txtDiaChi.Text = "";
+            //txtDiaChi.DataBindings.Clear();
+            //chkActice.DataBindings.Clear();
+            //cmbNhomNVId.DataBindings.Clear();
             //cmbNhomNVId.Text = "";
             //
+            nhanVienBindingSource.Add(new NhanVien());
+            nhanVienBindingSource.MoveLast();
             txtTenNV.Focus();
             this.btnInsert.Enabled = false;
             this.btnSave.Enabled = true;
