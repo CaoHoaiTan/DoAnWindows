@@ -21,19 +21,15 @@ namespace QuanLyKhachSan
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if ((this.txtUser.Text == "tandeptrai") && (this.txtPass.Text == "123"))
-            {
-                
-                Form frm = new MainForm();
-                frm.Text = "Quản lý Khách Sạn";
-                frm.ShowDialog();
+            {               
                 this.Close();
             }    
                 
             else
             {
                 MessageBox.Show("Không đúng tên người dùng / mật khẩu!!!", "Thông báo");              
-                this.txtPass.Text = "";
                 this.txtUser.Text = "";
+                this.txtPass.Text = "";
                 this.txtUser.Focus();
             }
         }
@@ -50,13 +46,18 @@ namespace QuanLyKhachSan
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13)
-                txtPass.Focus();
+                btnLogin.Focus();
         }
 
         private void txtpassword_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13)
-                btnLogin.Focus();
+                txtPass.Focus();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

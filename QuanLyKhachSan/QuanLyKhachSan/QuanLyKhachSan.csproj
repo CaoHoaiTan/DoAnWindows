@@ -64,6 +64,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CongViecForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongViecForm.Designer.cs">
+      <DependentUpon>CongViecForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CongViecModel.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="Initializer.cs" />
     <Compile Include="Login.cs">
@@ -103,6 +110,9 @@
     <Compile Include="NhomNVModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CongViecForm.resx">
+      <DependentUpon>CongViecForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

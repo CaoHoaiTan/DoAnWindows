@@ -67,7 +67,7 @@ namespace QuanLyKhachSan
         {
             //Update
             NhomNV nv = new NhomNV();
-          //  nv.NhomNVId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NhomNVId").ToString());
+            nv.NhomNVId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NhomNVId").ToString());
             nv.TenNhom = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TenNhom").ToString();
             nv.TrNhomId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TrNhomId").ToString());
             nv.CongViecId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "CongViecId").ToString());

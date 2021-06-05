@@ -31,21 +31,23 @@ namespace QuanLyKhachSan
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -58,35 +60,16 @@ namespace QuanLyKhachSan
             this.ribbon.ExpandCollapseItem,
             this.ribbon.SearchEditItem,
             this.barButtonItem1,
-            this.barButtonItem2});
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.barButtonItem4});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 3;
+            this.ribbon.MaxItemId = 5;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbon.Size = new System.Drawing.Size(654, 209);
             this.ribbon.StatusBar = this.ribbonStatusBar;
-            // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.ImageOptions.Image")));
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Quản Lý";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            // 
-            // ribbonStatusBar
-            // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 514);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(654, 30);
             // 
             // barButtonItem1
             // 
@@ -106,6 +89,45 @@ namespace QuanLyKhachSan
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Công Việc";
+            this.barButtonItem3.Id = 3;
+            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "Dịch Vụ";
+            this.barButtonItem4.Id = 4;
+            this.barButtonItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem4.ImageOptions.SvgImage")));
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.ribbonPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPage1.ImageOptions.Image")));
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "Quản Lý";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            // 
+            // ribbonStatusBar
+            // 
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 514);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.ribbon;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(654, 30);
+            // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.label9);
@@ -122,16 +144,75 @@ namespace QuanLyKhachSan
             this.panelControl1.Size = new System.Drawing.Size(630, 293);
             this.panelControl1.TabIndex = 2;
             // 
-            // label1
+            // label9
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Texturina SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(23, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lập trình Windows";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(436, 234);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 21);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "19110490";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(436, 191);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(98, 21);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "19110049";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(436, 148);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 21);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "19110454";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Texturina 12pt", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(255, 191);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(144, 26);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Thái Thành Nam";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Texturina 12pt", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(255, 234);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(165, 26);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Nguyễn Ngọc Trung";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Texturina 12pt", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(255, 148);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 26);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Cao Hoài Tấn";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Texturina ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(255, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 26);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Người thực hiện:";
             // 
             // label2
             // 
@@ -144,75 +225,16 @@ namespace QuanLyKhachSan
             this.label2.TabIndex = 0;
             this.label2.Text = "Đồ án cuối kỳ";
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Texturina ExtraBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(255, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 26);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Người thực hiện:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Texturina 12pt", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(255, 148);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 26);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Cao Hoài Tấn";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Texturina 12pt", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(255, 234);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(165, 26);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Nguyễn Ngọc Trung";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Texturina 12pt", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(255, 191);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 26);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Thái Thành Nam";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(436, 148);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 21);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "19110454";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(436, 191);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 21);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "19110049";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(436, 234);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 21);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "19110490";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Texturina SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(23, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Lập trình Windows";
             // 
             // MainForm
             // 
@@ -226,6 +248,7 @@ namespace QuanLyKhachSan
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -253,5 +276,7 @@ namespace QuanLyKhachSan
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
     }
 }

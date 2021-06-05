@@ -29,5 +29,17 @@ namespace QuanLyKhachSan
             Form frm = new NhomNVForm();
             frm.ShowDialog();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            Form frm = new Login();
+            frm.ShowDialog();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = new CongViecForm();
+            frm.ShowDialog();
+        }
     }
 }

@@ -32,8 +32,8 @@ namespace QuanLyKhachSan
             this.txtusername = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,8 +44,8 @@ namespace QuanLyKhachSan
             // 
             this.txtusername.Controls.Add(this.btnLogin);
             this.txtusername.Controls.Add(this.btnClose);
-            this.txtusername.Controls.Add(this.txtPass);
             this.txtusername.Controls.Add(this.txtUser);
+            this.txtusername.Controls.Add(this.txtPass);
             this.txtusername.Controls.Add(this.label3);
             this.txtusername.Controls.Add(this.label2);
             this.txtusername.Controls.Add(this.label1);
@@ -76,6 +76,14 @@ namespace QuanLyKhachSan
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(188, 146);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(152, 23);
+            this.txtUser.TabIndex = 1;
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpassword_KeyPress);
+            // 
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(188, 198);
@@ -83,15 +91,7 @@ namespace QuanLyKhachSan
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(152, 23);
             this.txtPass.TabIndex = 1;
-            this.txtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpassword_KeyPress);
-            // 
-            // txtUser
-            // 
-            this.txtUser.Location = new System.Drawing.Point(188, 146);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(152, 23);
-            this.txtUser.TabIndex = 1;
-            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label3
             // 
@@ -129,6 +129,7 @@ namespace QuanLyKhachSan
             this.Controls.Add(this.txtusername);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.txtusername.ResumeLayout(false);
             this.txtusername.PerformLayout();
             this.ResumeLayout(false);
@@ -140,8 +141,8 @@ namespace QuanLyKhachSan
         private System.Windows.Forms.Panel txtusername;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
