@@ -39,8 +39,9 @@ namespace QuanLyKhachSan
         }
         private void NhanVienForm_Load(object sender, EventArgs e)
         {
-            DataBindings();
-            
+            //DataBindings();
+            nhanVienBindingSource.DataSource = new NhanVienModel().FindAll();
+            nhomNVBindingSource.DataSource = new NhomNVModel().FindAll();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)

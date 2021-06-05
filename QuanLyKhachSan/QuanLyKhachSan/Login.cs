@@ -20,16 +20,14 @@ namespace QuanLyKhachSan
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if ((this.txtUser.Text == "tandeptrai") && (this.txtPass.Text == "123"))
+            if ((this.txtUser.Text == "") && (this.txtPass.Text == ""))
             {               
                 this.Close();
             }    
                 
             else
             {
-                MessageBox.Show("Không đúng tên người dùng / mật khẩu!!!", "Thông báo");              
-                this.txtUser.Text = "";
-                this.txtPass.Text = "";
+                MessageBox.Show("Không đúng tên người dùng / mật khẩu!!!", "Thông báo");
                 this.txtUser.Focus();
             }
         }

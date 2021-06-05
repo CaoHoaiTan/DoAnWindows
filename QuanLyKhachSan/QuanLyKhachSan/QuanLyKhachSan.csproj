@@ -136,6 +136,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\QuanLyKhachSan.Models.CongViec.datasource" />
+    <None Include="Properties\DataSources\QuanLyKhachSan.Models.DichVu.datasource" />
+    <None Include="Properties\DataSources\QuanLyKhachSan.Models.NhanVien.datasource" />
+    <None Include="Properties\DataSources\QuanLyKhachSan.Models.NhomNV.datasource" />
+    <None Include="Properties\DataSources\QuanLyKhachSan.Models.Phone.datasource" />
+    <None Include="Properties\DataSources\QuanLyKhachSan.Models.ThongTinDV.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
