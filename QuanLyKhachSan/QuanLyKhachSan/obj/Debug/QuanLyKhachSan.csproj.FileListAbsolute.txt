@@ -292,3 +292,4 @@ D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhac
 D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CopyComplete
 D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+E:\HK4 ( HK2 20-21)\Lập trình trên Window\Đồ án cuối kì\Github\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DichVuForm.resources

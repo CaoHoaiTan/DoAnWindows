@@ -41,5 +41,11 @@ namespace QuanLyKhachSan
             Form frm = new CongViecForm();
             frm.ShowDialog();
         }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = new DichVuForm();
+            frm.ShowDialog();
+        }
     }
 }
