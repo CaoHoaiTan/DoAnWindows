@@ -1,13 +1,5 @@
 ﻿using DevExpress.XtraBars;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace QuanLyKhachSan
 {
@@ -20,32 +12,27 @@ namespace QuanLyKhachSan
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = new NhanVienForm();
-            frm.ShowDialog();
+            new NhanVienForm().ShowDialog();
         }
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = new NhomNVForm();
-            frm.ShowDialog();
+            new NhomNVForm().ShowDialog();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Form frm = new Login();
-            frm.ShowDialog();
+            new Login().ShowDialog();
         }
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = new CongViecForm();
-            frm.ShowDialog();
+            new CongViecForm().ShowDialog();
         }
 
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = new DichVuForm();
-            frm.ShowDialog();
+            new DichVuForm().ShowDialog();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.AccessControl;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyKhachSan.Form;
 using QuanLyKhachSan.Models;
 namespace QuanLyKhachSan
 {
@@ -20,9 +21,9 @@ namespace QuanLyKhachSan
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new NhanVienForm());
-            //Application.Run(new NhomNVForm());
-            //Application.Run(new Login());
-            Application.Run(new MainForm());
+            Application.Run(new DichVuForm());
+            Application.Run(new ThongTinDichVuForm());
+            //Application.Run(new MainForm());
 
         }
     }

@@ -39,7 +39,7 @@ namespace QuanLyKhachSan
             dichVuBindingSource.Add(new DichVu());
             dichVuBindingSource.MoveLast();
             txtTenDV.Focus();
-
+            //
             btnInsert.Enabled = false;
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;

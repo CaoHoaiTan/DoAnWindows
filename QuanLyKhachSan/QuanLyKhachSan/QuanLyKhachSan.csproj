@@ -44,6 +44,8 @@
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -64,32 +66,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CongViecForm.cs">
+    <Compile Include="Forms\CongViecForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CongViecForm.Designer.cs">
+    <Compile Include="Forms\CongViecForm.Designer.cs">
       <DependentUpon>CongViecForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CongViecModel.cs" />
-    <Compile Include="Context.cs" />
-    <Compile Include="DichVuForm.cs">
+    <Compile Include="Forms\ThongTinDichVuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DichVuForm.Designer.cs">
+    <Compile Include="Forms\ThongTinDichVuForm.Designer.cs">
+      <DependentUpon>ThongTinDichVuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maps\ThongTinDVMap.cs" />
+    <Compile Include="Models\CongViecModel.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="Forms\DichVuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DichVuForm.Designer.cs">
       <DependentUpon>DichVuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DichVuModel.cs" />
+    <Compile Include="Models\DichVuModel.cs" />
     <Compile Include="Initializer.cs" />
-    <Compile Include="Login.cs">
+    <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Maps\CongViecMap.cs" />
@@ -100,40 +109,44 @@
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\NhomNV.cs" />
     <Compile Include="Models\Phone.cs" />
+    <Compile Include="Models\ThongTinDichVuModel.cs" />
     <Compile Include="Models\ThongTinDV.cs" />
-    <Compile Include="NhanVienForm.cs">
+    <Compile Include="Forms\NhanVienForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanVienForm.Designer.cs">
+    <Compile Include="Forms\NhanVienForm.Designer.cs">
       <DependentUpon>NhanVienForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanVienModel.cs" />
-    <Compile Include="NhomNVForm.cs">
+    <Compile Include="Models\NhanVienModel.cs" />
+    <Compile Include="Forms\NhomNVForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhomNVForm.Designer.cs">
+    <Compile Include="Forms\NhomNVForm.Designer.cs">
       <DependentUpon>NhomNVForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhomNVModel.cs" />
+    <Compile Include="Models\NhomNVModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CongViecForm.resx">
+    <EmbeddedResource Include="Forms\CongViecForm.resx">
       <DependentUpon>CongViecForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DichVuForm.resx">
+    <EmbeddedResource Include="Forms\DichVuForm.resx">
       <DependentUpon>DichVuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanVienForm.resx">
+    <EmbeddedResource Include="Forms\NhanVienForm.resx">
       <DependentUpon>NhanVienForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhomNVForm.resx">
+    <EmbeddedResource Include="Forms\NhomNVForm.resx">
       <DependentUpon>NhomNVForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThongTinDichVuForm.resx">
+      <DependentUpon>ThongTinDichVuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

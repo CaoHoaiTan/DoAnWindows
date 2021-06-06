@@ -293,3 +293,17 @@ D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhac
 D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
 E:\HK4 ( HK2 20-21)\Lập trình trên Window\Đồ án cuối kì\Github\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DichVuForm.resources
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DichVuForm.resources
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Form.ThongTinDichVuForm.resources
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\DevExpress.XtraScheduler.v19.2.Core.dll
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\DevExpress.XtraScheduler.v19.2.dll
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\DevExpress.XtraScheduler.v19.2.xml
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\DevExpress.XtraScheduler.v19.2.Core.xml
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\de\DevExpress.XtraScheduler.v19.2.resources.dll
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\es\DevExpress.XtraScheduler.v19.2.resources.dll
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ja\DevExpress.XtraScheduler.v19.2.resources.dll
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ru\DevExpress.XtraScheduler.v19.2.resources.dll
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\de\DevExpress.XtraScheduler.v19.2.Core.resources.dll
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\es\DevExpress.XtraScheduler.v19.2.Core.resources.dll
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ja\DevExpress.XtraScheduler.v19.2.Core.resources.dll
+D:\Năm 2\Học kì 2\Lập trình Windows\DoAnWindows\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ru\DevExpress.XtraScheduler.v19.2.Core.resources.dll

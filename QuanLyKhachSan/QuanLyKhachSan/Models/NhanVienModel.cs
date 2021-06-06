@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevExpress.Data.ODataLinq.Helpers;
+using DevExpress.Data.WcfLinq.Helpers;
 using QuanLyKhachSan.Models;
 namespace QuanLyKhachSan
 {
@@ -13,6 +15,10 @@ namespace QuanLyKhachSan
         public List<NhanVien> FindAll()
         {
             return db.nhanViens.ToList();
+        }
+        public List<NhanVien> FindTV(int IdNhom) // Lọc thành viên nhóm
+        {
+            return db.nhanViens.Where(x => x.NhomNVId == IdNhom).ToList();
         }
         // hàm xóa
         public void delete(NhanVien nv)

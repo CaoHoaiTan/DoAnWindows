@@ -23,9 +23,12 @@ namespace QuanLyKhachSan
         private void NhomNVForm_Load(object sender, EventArgs e)
         {
             // grcNhomNV.DataSource = new NhomNVModel().FindAll();
-            nhomNVBindingSource.DataSource = new NhomNVModel().FindAll();
-            congViecBindingSource.DataSource = new CongViecModel().FindAll();
-            nhanVienBindingSource.DataSource = new NhanVienModel().FindAll();
+            nhomNVBindingSource.DataSource = 
+                new NhomNVModel().FindAll();
+            congViecBindingSource.DataSource = 
+                new CongViecModel().FindAll();
+            nhanVienBindingSource.DataSource =
+                new NhanVienModel().FindTV(int.Parse(txtNhomNVId.Text));
 
             txtNhomNVId.Enabled = false;
             btnInsert.Enabled = true;
@@ -105,6 +108,12 @@ namespace QuanLyKhachSan
         private void btnCancel_Click(object sender, EventArgs e)
         {
             NhomNVForm_Load(sender, e);
+        }
+
+        private void txtNhomNVId_TextChanged(object sender, EventArgs e)
+        {
+            nhanVienBindingSource.DataSource = 
+                new NhanVienModel().FindTV(int.Parse(txtNhomNVId.Text));
         }
     }
 }
