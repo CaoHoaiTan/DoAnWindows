@@ -19,88 +19,36 @@ namespace QuanLyKhachSan
         {
             InitializeComponent();
         }
-        private new void DataBindings()
+
+        private void NhomNVForm_Load(object sender, EventArgs e)
         {
             // grcNhomNV.DataSource = new NhomNVModel().FindAll();
             nhomNVBindingSource.DataSource = new NhomNVModel().FindAll();
             congViecBindingSource.DataSource = new CongViecModel().FindAll();
             nhanVienBindingSource.DataSource = new NhanVienModel().FindAll();
+
+            txtNhomNVId.Enabled = false;
+            btnInsert.Enabled = true;
+            btnUpdate.Enabled = true;
+            btnDelete.Enabled = true;
             //
-            //this.cmbCVId.DataSource = db.congViecs.ToList();
-            //this.cmbCVId.DisplayMember = "TenCV";
-            //this.cmbCVId.ValueMember = "CongViecId";
+            btnCancel.Enabled = false;
+            btnSave.Enabled = false;
 
-            ////combo box trNhomid
-            //this.cmbTrNhomId.DataSource = db.nhanViens.ToList();
-            //this.cmbTrNhomId.DisplayMember = "TenNV";
-            //this.cmbTrNhomId.ValueMember = "NhanVienId";
-            //
-
-            
-            this.btnInsert.Enabled = true;
-            this.btnSave.Enabled = false;
-        }
-
-        private void NhomNVForm_Load(object sender, EventArgs e)
-        {
-            DataBindings();
-            
-        }
-
-        private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
-        {
-            // Delete
-            DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
-            {
-                //khởi tạo đối tượng nhân viên
-                NhomNV nv = new NhomNV();
-                //lấy mã nhân viên từ gridView1 của devexpress, lưu ý các bạn nhớ viết name của trường cần lấy phải đúng như
-                //trong csdl nhé
-                nv.NhomNVId =
-                int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NhomNVId").ToString());
-                //thực hienj hàm xóa
-                new NhomNVModel().delete(nv);
-                MessageBox.Show("Thành Công");
-                grcNhomNV.RefreshDataSource();
-                DataBindings();
-            }
-        }
-
-        private void repositoryItemButtonEdit2_Click(object sender, EventArgs e)
-        {
-            //Update
-            NhomNV nv = new NhomNV();
-            nv.NhomNVId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NhomNVId").ToString());
-            nv.TenNhom = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TenNhom").ToString();
-            nv.TrNhomId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TrNhomId").ToString());
-            nv.CongViecId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "CongViecId").ToString());
-            //
-            new NhomNVModel().Update(nv);
-            MessageBox.Show("Thành Công");
-            grcNhomNV.RefreshDataSource();
-            DataBindings();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            ////
-            //txtNhomNVId.Enabled = false;
-            //txtNhomNVId.Text = "";
-            //txtTenNhom.Text = "";
-            ////
-            //txtNhomNVId.DataBindings.Clear();
-            //txtNhomNVId.DataBindings.Clear();
-            //cmbCVId.DataBindings.Clear();
-            //cmbTrNhomId.DataBindings.Clear();
-
-            ////cmbNhomNVId.Text = "";
-            ////
+          
             nhomNVBindingSource.Add(new NhomNV());
-            nhomNVBindingSource.MoveLast();
+            nhomNVBindingSource.MoveLast();           
             txtTenNhom.Focus();
-            this.btnInsert.Enabled = false;
-            this.btnSave.Enabled = true;
+            btnInsert.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnDelete.Enabled = false;
+            //
+            btnCancel.Enabled = true;
+            btnSave.Enabled = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -114,8 +62,49 @@ namespace QuanLyKhachSan
     
             new NhomNVModel().insert(nv);
             MessageBox.Show("Thành Công");
-            grcNhomNV.RefreshDataSource();
-            DataBindings();
+            //grcNhomNV.RefreshDataSource();
+            NhomNVForm_Load(sender, e);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            // Delete
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                //khởi tạo đối tượng nhân viên
+                NhomNV nv = new NhomNV();
+                //lấy mã nhân viên từ gridView1 của devexpress, lưu ý các bạn nhớ viết name của trường cần lấy phải đúng như
+                //trong csdl nhé
+                nv.NhomNVId = int.Parse(txtNhomNVId.Text);             
+                //thực hienj hàm xóa
+                new NhomNVModel().delete(nv);
+                MessageBox.Show("Thành Công");
+                //grcNhomNV.RefreshDataSource();
+                NhomNVForm_Load(sender, e);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            //Update
+            NhomNV nv = new NhomNV();
+            nv.NhomNVId = int.Parse(txtNhomNVId.Text);
+            nv.TenNhom = txtTenNhom.Text;
+            if (cmbTrNhomId.SelectedValue != null)
+                nv.TrNhomId = int.Parse(cmbTrNhomId.SelectedValue.ToString());
+            if (cmbCVId.SelectedValue != null)
+                nv.CongViecId = int.Parse(cmbCVId.SelectedValue.ToString());
+            //
+            new NhomNVModel().Update(nv);
+            MessageBox.Show("Thành Công");
+            // grcNhomNV.RefreshDataSource();
+            NhomNVForm_Load(sender, e);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            NhomNVForm_Load(sender, e);
         }
     }
 }

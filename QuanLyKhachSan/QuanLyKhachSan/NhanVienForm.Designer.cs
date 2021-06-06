@@ -77,7 +77,7 @@ namespace QuanLyKhachSan
             // 
             this.grcNhanVien.DataSource = this.nhanVienBindingSource;
             this.grcNhanVien.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grcNhanVien.Location = new System.Drawing.Point(10, 169);
+            this.grcNhanVien.Location = new System.Drawing.Point(12, 208);
             this.grcNhanVien.MainView = this.gridView1;
             this.grcNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grcNhanVien.Name = "grcNhanVien";
@@ -86,7 +86,7 @@ namespace QuanLyKhachSan
             this.repositoryItemButtonEdit2,
             this.repositoryItemComboBox1,
             this.LookupNhomNV});
-            this.grcNhanVien.Size = new System.Drawing.Size(688, 185);
+            this.grcNhanVien.Size = new System.Drawing.Size(803, 228);
             this.grcNhanVien.TabIndex = 0;
             this.grcNhanVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -104,77 +104,75 @@ namespace QuanLyKhachSan
             this.NgaySinh,
             this.IsActive,
             this.NhomNVId});
-            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.grcNhanVien;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.ReadOnly = true;
-            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             // 
             // NhanVienId
             // 
             this.NhanVienId.Caption = "NhanVienId";
             this.NhanVienId.FieldName = "NhanVienId";
-            this.NhanVienId.MinWidth = 21;
+            this.NhanVienId.MinWidth = 24;
             this.NhanVienId.Name = "NhanVienId";
             this.NhanVienId.OptionsColumn.ReadOnly = true;
             this.NhanVienId.Visible = true;
             this.NhanVienId.VisibleIndex = 0;
-            this.NhanVienId.Width = 81;
+            this.NhanVienId.Width = 94;
             // 
             // TenNV
             // 
             this.TenNV.Caption = "TenNV";
             this.TenNV.FieldName = "TenNV";
-            this.TenNV.MinWidth = 21;
+            this.TenNV.MinWidth = 24;
             this.TenNV.Name = "TenNV";
             this.TenNV.OptionsColumn.ReadOnly = true;
             this.TenNV.Visible = true;
             this.TenNV.VisibleIndex = 1;
-            this.TenNV.Width = 81;
+            this.TenNV.Width = 94;
             // 
             // DiaChi
             // 
             this.DiaChi.Caption = "DiaChi";
             this.DiaChi.FieldName = "DiaChi";
-            this.DiaChi.MinWidth = 21;
+            this.DiaChi.MinWidth = 24;
             this.DiaChi.Name = "DiaChi";
             this.DiaChi.OptionsColumn.ReadOnly = true;
             this.DiaChi.Visible = true;
             this.DiaChi.VisibleIndex = 2;
-            this.DiaChi.Width = 81;
+            this.DiaChi.Width = 94;
             // 
             // NgaySinh
             // 
             this.NgaySinh.Caption = "NgaySinh";
             this.NgaySinh.FieldName = "NgaySinh";
-            this.NgaySinh.MinWidth = 21;
+            this.NgaySinh.MinWidth = 24;
             this.NgaySinh.Name = "NgaySinh";
             this.NgaySinh.OptionsColumn.ReadOnly = true;
             this.NgaySinh.Visible = true;
             this.NgaySinh.VisibleIndex = 3;
-            this.NgaySinh.Width = 81;
+            this.NgaySinh.Width = 94;
             // 
             // IsActive
             // 
             this.IsActive.Caption = "IsActive";
             this.IsActive.FieldName = "IsActive";
-            this.IsActive.MinWidth = 21;
+            this.IsActive.MinWidth = 24;
             this.IsActive.Name = "IsActive";
             this.IsActive.OptionsColumn.ReadOnly = true;
             this.IsActive.Visible = true;
             this.IsActive.VisibleIndex = 4;
-            this.IsActive.Width = 81;
+            this.IsActive.Width = 94;
             // 
             // NhomNVId
             // 
             this.NhomNVId.Caption = "NhomNVId";
             this.NhomNVId.FieldName = "NhomNVId";
-            this.NhomNVId.MinWidth = 21;
+            this.NhomNVId.MinWidth = 24;
             this.NhomNVId.Name = "NhomNVId";
             this.NhomNVId.OptionsColumn.ReadOnly = true;
             this.NhomNVId.Visible = true;
             this.NhomNVId.VisibleIndex = 5;
-            this.NhomNVId.Width = 81;
+            this.NhomNVId.Width = 94;
             // 
             // repositoryItemButtonEdit1
             // 
@@ -219,11 +217,11 @@ namespace QuanLyKhachSan
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtNhanVienId);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(10, 10);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(688, 145);
+            this.groupBox1.Size = new System.Drawing.Size(803, 178);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -234,10 +232,10 @@ namespace QuanLyKhachSan
             this.cmbNhomNVId.DataSource = this.nhomNVBindingSource;
             this.cmbNhomNVId.DisplayMember = "TenNhom";
             this.cmbNhomNVId.FormattingEnabled = true;
-            this.cmbNhomNVId.Location = new System.Drawing.Point(568, 23);
+            this.cmbNhomNVId.Location = new System.Drawing.Point(663, 28);
             this.cmbNhomNVId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbNhomNVId.Name = "cmbNhomNVId";
-            this.cmbNhomNVId.Size = new System.Drawing.Size(104, 21);
+            this.cmbNhomNVId.Size = new System.Drawing.Size(121, 24);
             this.cmbNhomNVId.TabIndex = 5;
             this.cmbNhomNVId.ValueMember = "NhomNVId";
             // 
@@ -250,10 +248,10 @@ namespace QuanLyKhachSan
             this.chkActive.AutoSize = true;
             this.chkActive.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.nhanVienBindingSource, "IsActive", true));
             this.chkActive.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.nhanVienBindingSource, "IsActive", true));
-            this.chkActive.Location = new System.Drawing.Point(254, 106);
+            this.chkActive.Location = new System.Drawing.Point(296, 130);
             this.chkActive.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkActive.Name = "chkActive";
-            this.chkActive.Size = new System.Drawing.Size(65, 17);
+            this.chkActive.Size = new System.Drawing.Size(77, 21);
             this.chkActive.TabIndex = 3;
             this.chkActive.Text = "IsActive";
             this.chkActive.UseVisualStyleBackColor = true;
@@ -261,92 +259,92 @@ namespace QuanLyKhachSan
             // TimeNgaySinh
             // 
             this.TimeNgaySinh.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.nhanVienBindingSource, "NgaySinh", true));
-            this.TimeNgaySinh.Location = new System.Drawing.Point(320, 59);
+            this.TimeNgaySinh.Location = new System.Drawing.Point(373, 73);
             this.TimeNgaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TimeNgaySinh.Name = "TimeNgaySinh";
-            this.TimeNgaySinh.Size = new System.Drawing.Size(172, 21);
+            this.TimeNgaySinh.Size = new System.Drawing.Size(200, 23);
             this.TimeNgaySinh.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(477, 23);
+            this.label4.Location = new System.Drawing.Point(556, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.Size = new System.Drawing.Size(74, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "NhomNVId";
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhanVienBindingSource, "DiaChi", true));
-            this.txtDiaChi.Location = new System.Drawing.Point(95, 104);
+            this.txtDiaChi.Location = new System.Drawing.Point(111, 128);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(107, 21);
+            this.txtDiaChi.Size = new System.Drawing.Size(124, 23);
             this.txtDiaChi.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(240, 63);
+            this.label5.Location = new System.Drawing.Point(280, 78);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(66, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "NgaySinh";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 109);
+            this.label3.Location = new System.Drawing.Point(19, 134);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "DiaChi";
             // 
             // txtTenNV
             // 
             this.txtTenNV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhanVienBindingSource, "TenNV", true));
-            this.txtTenNV.Location = new System.Drawing.Point(95, 61);
+            this.txtTenNV.Location = new System.Drawing.Point(111, 75);
             this.txtTenNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(107, 21);
+            this.txtTenNV.Size = new System.Drawing.Size(124, 23);
             this.txtTenNV.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 66);
+            this.label2.Location = new System.Drawing.Point(19, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(48, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "TenNV";
             // 
             // txtNhanVienId
             // 
             this.txtNhanVienId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nhanVienBindingSource, "NhanVienId", true));
-            this.txtNhanVienId.Location = new System.Drawing.Point(95, 24);
+            this.txtNhanVienId.Location = new System.Drawing.Point(111, 30);
             this.txtNhanVienId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNhanVienId.Name = "txtNhanVienId";
             this.txtNhanVienId.ReadOnly = true;
-            this.txtNhanVienId.Size = new System.Drawing.Size(107, 21);
+            this.txtNhanVienId.Size = new System.Drawing.Size(124, 23);
             this.txtNhanVienId.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 28);
+            this.label1.Location = new System.Drawing.Point(19, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "NhanVienId";
             // 
             // btnSave
             // 
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(205, 358);
+            this.btnSave.Location = new System.Drawing.Point(239, 441);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(91, 31);
+            this.btnSave.Size = new System.Drawing.Size(106, 38);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -354,10 +352,10 @@ namespace QuanLyKhachSan
             // btnInsert
             // 
             this.btnInsert.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.ImageOptions.Image")));
-            this.btnInsert.Location = new System.Drawing.Point(10, 358);
+            this.btnInsert.Location = new System.Drawing.Point(12, 441);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(89, 31);
+            this.btnInsert.Size = new System.Drawing.Size(104, 38);
             this.btnInsert.TabIndex = 4;
             this.btnInsert.Text = "Thêm";
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -365,10 +363,10 @@ namespace QuanLyKhachSan
             // btnDelete
             // 
             this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(302, 358);
+            this.btnDelete.Location = new System.Drawing.Point(352, 441);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(89, 31);
+            this.btnDelete.Size = new System.Drawing.Size(104, 38);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -376,10 +374,10 @@ namespace QuanLyKhachSan
             // btnCancel
             // 
             this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(607, 358);
+            this.btnCancel.Location = new System.Drawing.Point(708, 441);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(91, 31);
+            this.btnCancel.Size = new System.Drawing.Size(106, 38);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -387,19 +385,19 @@ namespace QuanLyKhachSan
             // btnUpdate
             // 
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(105, 358);
+            this.btnUpdate.Location = new System.Drawing.Point(122, 441);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(94, 31);
+            this.btnUpdate.Size = new System.Drawing.Size(110, 38);
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // NhanVienForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 398);
+            this.ClientSize = new System.Drawing.Size(825, 490);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCancel);

@@ -41,8 +41,6 @@ namespace QuanLyKhachSan
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
             this.cmbTrNhomId = new System.Windows.Forms.ComboBox();
             this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbCVId = new System.Windows.Forms.ComboBox();
@@ -53,9 +51,11 @@ namespace QuanLyKhachSan
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grcNhomNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhomNVBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -144,7 +144,7 @@ namespace QuanLyKhachSan
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.repositoryItemButtonEdit1.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.ContextImageOptions.Image")));
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
-            this.repositoryItemButtonEdit1.Click += new System.EventHandler(this.repositoryItemButtonEdit1_Click);
+
             // 
             // repositoryItemButtonEdit2
             // 
@@ -153,7 +153,6 @@ namespace QuanLyKhachSan
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.repositoryItemButtonEdit2.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit2.ContextImageOptions.Image")));
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
-            this.repositoryItemButtonEdit2.Click += new System.EventHandler(this.repositoryItemButtonEdit2_Click);
             // 
             // panel1
             // 
@@ -170,28 +169,6 @@ namespace QuanLyKhachSan
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(707, 166);
             this.panel1.TabIndex = 1;
-            // 
-            // btnSave
-            // 
-            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(142, 409);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 38);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnInsert
-            // 
-            this.btnInsert.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.ImageOptions.Image")));
-            this.btnInsert.Location = new System.Drawing.Point(18, 409);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(94, 38);
-            this.btnInsert.TabIndex = 3;
-            this.btnInsert.Text = "Thêm";
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // cmbTrNhomId
             // 
@@ -282,48 +259,70 @@ namespace QuanLyKhachSan
             this.label1.TabIndex = 0;
             this.label1.Text = "Trưởng nhóm";
             // 
-            // simpleButton1
+            // btnSave
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(274, 409);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(94, 38);
-            this.simpleButton1.TabIndex = 3;
-            this.simpleButton1.Text = "Xóa";
-            this.simpleButton1.Click += new System.EventHandler(this.btnInsert_Click);
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.Location = new System.Drawing.Point(142, 409);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 38);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // simpleButton2
+            // btnInsert
             // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(398, 409);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(110, 38);
-            this.simpleButton2.TabIndex = 3;
-            this.simpleButton2.Text = "Cập nhật";
-            this.simpleButton2.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnInsert.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.ImageOptions.Image")));
+            this.btnInsert.Location = new System.Drawing.Point(18, 409);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(94, 38);
+            this.btnInsert.TabIndex = 3;
+            this.btnInsert.Text = "Thêm";
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // simpleButton3
+            // btnDelete
             // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(557, 409);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(110, 38);
-            this.simpleButton3.TabIndex = 3;
-            this.simpleButton3.Text = "Hủy";
-            this.simpleButton3.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(274, 409);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(94, 38);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnUpdate.Location = new System.Drawing.Point(398, 409);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(110, 38);
+            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(557, 409);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(110, 38);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // NhomNVForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(731, 473);
-            this.Controls.Add(this.simpleButton3);
-            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.grcNhomNV);
@@ -368,8 +367,8 @@ namespace QuanLyKhachSan
         private System.Windows.Forms.BindingSource nhomNVBindingSource;
         private System.Windows.Forms.BindingSource nhanVienBindingSource;
         private System.Windows.Forms.BindingSource congViecBindingSource;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.SimpleButton btnUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
     }
 }

@@ -32,22 +32,22 @@ namespace QuanLyKhachSan
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CongViecForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtTenCV = new System.Windows.Forms.TextBox();
             this.congViecBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtCVId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.grcCongViec = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.CongViecId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TenCV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.congViecBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcCongViec)).BeginInit();
@@ -66,26 +66,6 @@ namespace QuanLyKhachSan
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(386, 140);
             this.panel1.TabIndex = 0;
-            // 
-            // btnInsert
-            // 
-            this.btnInsert.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.ImageOptions.Image")));
-            this.btnInsert.Location = new System.Drawing.Point(13, 377);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(94, 42);
-            this.btnInsert.TabIndex = 2;
-            this.btnInsert.Text = "Thêm";
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(155, 377);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 42);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtTenCV
             // 
@@ -124,6 +104,26 @@ namespace QuanLyKhachSan
             this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "CongViecId";
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.ImageOptions.Image")));
+            this.btnInsert.Location = new System.Drawing.Point(13, 377);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(94, 42);
+            this.btnInsert.TabIndex = 2;
+            this.btnInsert.Text = "Thêm";
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.Location = new System.Drawing.Point(155, 377);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(100, 42);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // grcCongViec
             // 
@@ -175,7 +175,6 @@ namespace QuanLyKhachSan
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.repositoryDelete.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repositoryDelete.ContextImageOptions.Image")));
             this.repositoryDelete.Name = "repositoryDelete";
-            this.repositoryDelete.Click += new System.EventHandler(this.repositoryDelete_Click);
             // 
             // repositoryUpdate
             // 
@@ -184,46 +183,45 @@ namespace QuanLyKhachSan
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.repositoryUpdate.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repositoryUpdate.ContextImageOptions.Image")));
             this.repositoryUpdate.Name = "repositoryUpdate";
-            this.repositoryUpdate.Click += new System.EventHandler(this.repositoryUpdate_Click);
             // 
-            // simpleButton1
+            // btnDelete
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(12, 425);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(94, 42);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Xóa";
-            this.simpleButton1.Click += new System.EventHandler(this.btnInsert_Click);
+            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(12, 425);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(94, 42);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // simpleButton2
+            // btnUpdate
             // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(155, 425);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(100, 42);
-            this.simpleButton2.TabIndex = 2;
-            this.simpleButton2.Text = "Cập nhật";
-            this.simpleButton2.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnUpdate.Location = new System.Drawing.Point(155, 425);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 42);
+            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // simpleButton3
+            // btnCancel
             // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(285, 392);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(100, 54);
-            this.simpleButton3.TabIndex = 2;
-            this.simpleButton3.Text = "Hủy";
-            this.simpleButton3.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(285, 392);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 54);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // CongViecForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 479);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.grcCongViec);
@@ -258,8 +256,8 @@ namespace QuanLyKhachSan
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryDelete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryUpdate;
         private System.Windows.Forms.BindingSource congViecBindingSource;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.SimpleButton btnUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
     }
 }

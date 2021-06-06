@@ -23,7 +23,8 @@ namespace QuanLyKhachSan
         private void DichVuForm_Load(object sender, EventArgs e)
         {
             dichVuBindingSource.DataSource = new DichVuModel().FindAll();
-
+            txtDvId.Enabled = false;
+            //
             btnInsert.Enabled = true;
             btnUpdate.Enabled = true;
             btnDelete.Enabled = true;
@@ -54,7 +55,7 @@ namespace QuanLyKhachSan
             dv.GiaTien = txtGiaTien.Text;
             new DichVuModel().insert(dv);
             MessageBox.Show("Thành Công");
-            grcDichVu.RefreshDataSource();
+            //grcDichVu.RefreshDataSource();
             DichVuForm_Load(sender, e);
         }
 
@@ -67,26 +68,27 @@ namespace QuanLyKhachSan
                 DichVu dv = new DichVu();
                 //lấy mã nhân viên từ gridView1 của devexpress, lưu ý các bạn nhớ viết name của trường cần lấy phải đúng như
                 //trong csdl nhé
-                dv.DichVuId =
-                int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DichVuId").ToString());
+                dv.DichVuId = int.Parse(txtDvId.Text);
                 //thực hienj hàm xóa
                 new DichVuModel().delete(dv);
                 MessageBox.Show("Thành Công");
-                grcDichVu.RefreshDataSource();
+                //grcDichVu.RefreshDataSource();
+                DichVuForm_Load(sender, e);
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             DichVu dv = new DichVu();
-            
-            dv.DichVuId = int.Parse(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DichVuId").ToString());
-            dv.TenDV = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TenDV").ToString();
-            dv.GiaTien = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "GiaTien").ToString();
+            dv.DichVuId = int.Parse(txtDvId.Text);
+            dv.TenDV = txtTenDV.Text;
+            dv.GiaTien = txtGiaTien.Text;
+
             //
             new DichVuModel().Update(dv);
             MessageBox.Show("Thành Công");
-            grcDichVu.RefreshDataSource();
+            // grcDichVu.RefreshDataSource();
+            DichVuForm_Load(sender, e);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

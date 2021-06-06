@@ -23,8 +23,11 @@ namespace QuanLyKhachSan
         {
             nhanVienBindingSource.DataSource = new NhanVienModel().FindAll();
             nhomNVBindingSource.DataSource = new NhomNVModel().FindAll();
+            //
+            this.txtNhanVienId.Enabled = false;
             // Không cho thao tác nút Lưu
             this.btnSave.Enabled = false;
+            this.btnCancel.Enabled = false;
             // Cho thao tác nút Thêm, Xóa, Cập nhật
             this.btnUpdate.Enabled = true;
             this.btnInsert.Enabled = true;
@@ -87,6 +90,7 @@ namespace QuanLyKhachSan
             txtTenNV.Focus();                           // Chuyển con trỏ đến tên đối tượng mới tạo
             // Cho thao tác nút Lưu
             this.btnSave.Enabled = true;
+            this.btnCancel.Enabled = true;
             // Không cho thao tác nút Thêm, Cập nhật, Xóa
             this.btnInsert.Enabled = false;
             this.btnUpdate.Enabled = false;
