@@ -21,7 +21,6 @@ namespace QuanLyKhachSan
         public DbSet<NhomNV> NhomNVs { get; set; }
         public DbSet<CongViec> congViecs { get; set; }
         public DbSet<DichVu> dichVus { get; set; }
-        public DbSet<ThongTinDV> ttDVs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //Quan he n-n
@@ -34,7 +33,6 @@ namespace QuanLyKhachSan
                             cs.MapRightKey("CongViecId");
                             cs.ToTable("ThongTinDVs");
                         });
-            modelBuilder.Configurations.Add(new ThongTinDVMap());
             modelBuilder.Configurations.Add(new NhanVienMap());
             modelBuilder.Configurations.Add(new NhomNVMap());
             modelBuilder.Configurations.Add(new CongViecMap());

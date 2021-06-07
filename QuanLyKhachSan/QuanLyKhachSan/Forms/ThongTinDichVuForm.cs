@@ -21,7 +21,9 @@ namespace QuanLyKhachSan.Form
 
         private void ThongTinDichVuForm_Load(object sender, EventArgs e)
         {
-            thongTinDVBindingSource.DataSource = new ThongTinDichVuModel().FindAll();
+            // TODO: This line of code loads data into the 'qLKhachSanDataSet.ThongTinDVs' table. You can move, or remove it, as needed.
+            this.thongTinDVsTableAdapter.Fill(this.qLKhachSanDataSet.ThongTinDVs);
+            thongTinDVsBindingSource.DataSource = qLKhachSanDataSet;
             congViecBindingSource.DataSource = new CongViecModel().FindAll();
             dichVuBindingSource.DataSource = new DichVuModel().FindAll();
             //
@@ -35,8 +37,6 @@ namespace QuanLyKhachSan.Form
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            thongTinDVBindingSource.Add(new ThongTinDV());
-            thongTinDVBindingSource.MoveLast();
             //
             btnInsert.Enabled = false;
             btnUpdate.Enabled = false;
@@ -48,20 +48,26 @@ namespace QuanLyKhachSan.Form
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            ThongTinDV ttdv = new ThongTinDV();
-            ttdv.CongViecId = int.Parse(cmbCongViecId.SelectedValue.ToString());
-            ttdv.DichVuId = int.Parse(cmbDichVuId.SelectedValue.ToString());
-            new ThongTinDichVuModel().insert(ttdv);
+            thongTinDVsTableAdapter.Insert(
+                int.Parse(cmbDichVuId.SelectedValue.ToString()),
+                int.Parse(cmbCongViecId.SelectedValue.ToString()));
+            //ThongTinDV ttdv = new ThongTinDV();
+            //ttdv.CongViecId = int.Parse(cmbCongViecId.SelectedValue.ToString());
+            //ttdv.DichVuId = int.Parse(cmbDichVuId.SelectedValue.ToString());
+            //new ThongTinDichVuModel().insert(ttdv);
             MessageBox.Show("Thành công!");
             ThongTinDichVuForm_Load(sender, e);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            ThongTinDV ttdv = new ThongTinDV();
-            ttdv.CongViecId = int.Parse(cmbCongViecId.SelectedValue.ToString());
-            ttdv.DichVuId = int.Parse(cmbDichVuId.SelectedValue.ToString());
-            new ThongTinDichVuModel().delete(ttdv);
+            thongTinDVsTableAdapter.Delete(
+                int.Parse(cmbDichVuId.SelectedValue.ToString()),
+                int.Parse(cmbCongViecId.SelectedValue.ToString()));
+            //ThongTinDV ttdv = new ThongTinDV();
+            //ttdv.CongViecId = int.Parse(cmbCongViecId.SelectedValue.ToString());
+            //ttdv.DichVuId = int.Parse(cmbDichVuId.SelectedValue.ToString());
+            //new ThongTinDichVuModel().delete(ttdv);
             MessageBox.Show("Thành công!");
             ThongTinDichVuForm_Load(sender, e);
         }
@@ -73,7 +79,18 @@ namespace QuanLyKhachSan.Form
 
         private void cmbDichVuId_SelectedValueChanged(object sender, EventArgs e)
         {
-          //  btnDelete.Enabled = false;
+            if (cmbDichVuId.SelectedValue != null)
+            {   // Lọc nhưng Công việc chưa có trong dịch vụ
+                congViecBindingSource.DataSource =
+                    new Context().congViecs.SqlQuery(
+                        "SELECT * " +
+                        "FROM CongViecs " +
+                        "WHERE (CongViecId NOT IN (SELECT CongViecId " +
+                                                  "FROM ThongTinDVs " +
+                                                  "WHERE DichVuId = @p0))",
+                        cmbDichVuId.SelectedValue.ToString()
+                        ).ToList();
+            }
         }
 
         private void cmbCongViecId_SelectedIndexChanged(object sender, EventArgs e)

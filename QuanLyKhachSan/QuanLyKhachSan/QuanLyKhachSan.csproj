@@ -84,7 +84,6 @@
     <Compile Include="Forms\ThongTinDichVuForm.Designer.cs">
       <DependentUpon>ThongTinDichVuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Maps\ThongTinDVMap.cs" />
     <Compile Include="Models\CongViecModel.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="Forms\DichVuForm.cs">
@@ -116,8 +115,6 @@
     <Compile Include="Models\NhomNV.cs" />
     <Compile Include="Models\Phone.cs" />
     <Compile Include="Models\PhoneModel.cs" />
-    <Compile Include="Models\ThongTinDichVuModel.cs" />
-    <Compile Include="Models\ThongTinDV.cs" />
     <Compile Include="Forms\NhanVienForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +131,11 @@
     <Compile Include="Models\NhomNVModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLKhachSanDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLKhachSanDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\CongViecForm.resx">
       <DependentUpon>CongViecForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +187,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLKhachSanDataSet1.xsc">
+      <DependentUpon>QLKhachSanDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLKhachSanDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLKhachSanDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLKhachSanDataSet1.xss">
+      <DependentUpon>QLKhachSanDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

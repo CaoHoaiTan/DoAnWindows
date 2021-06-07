@@ -2,6 +2,8 @@
 using System;
 using System.Windows.Forms;
 using QuanLyKhachSan.Forms;
+using QuanLyKhachSan.Form;
+
 namespace QuanLyKhachSan
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -39,6 +41,11 @@ namespace QuanLyKhachSan
         private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
         {
             new PhoneForm().ShowDialog();
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            new ThongTinDichVuForm().ShowDialog();
         }
     }
 }
