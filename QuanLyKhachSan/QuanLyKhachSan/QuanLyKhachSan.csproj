@@ -72,6 +72,12 @@
     <Compile Include="Forms\CongViecForm.Designer.cs">
       <DependentUpon>CongViecForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PhoneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PhoneForm.Designer.cs">
+      <DependentUpon>PhoneForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ThongTinDichVuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,7 @@
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\NhomNV.cs" />
     <Compile Include="Models\Phone.cs" />
+    <Compile Include="Models\PhoneModel.cs" />
     <Compile Include="Models\ThongTinDichVuModel.cs" />
     <Compile Include="Models\ThongTinDV.cs" />
     <Compile Include="Forms\NhanVienForm.cs">
@@ -145,6 +152,9 @@
     <EmbeddedResource Include="Forms\NhomNVForm.resx">
       <DependentUpon>NhomNVForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PhoneForm.resx">
+      <DependentUpon>PhoneForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ThongTinDichVuForm.resx">
       <DependentUpon>ThongTinDichVuForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +174,7 @@
     <None Include="Properties\DataSources\QuanLyKhachSan.Models.NhanVien.datasource" />
     <None Include="Properties\DataSources\QuanLyKhachSan.Models.NhomNV.datasource" />
     <None Include="Properties\DataSources\QuanLyKhachSan.Models.Phone.datasource" />
+    <None Include="Properties\DataSources\QuanLyKhachSan.Models.ThongTinDichVuModel.datasource" />
     <None Include="Properties\DataSources\QuanLyKhachSan.Models.ThongTinDV.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

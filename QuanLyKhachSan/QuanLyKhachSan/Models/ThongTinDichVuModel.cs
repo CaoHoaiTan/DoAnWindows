@@ -19,7 +19,7 @@ namespace QuanLyKhachSan.Models
             db.SaveChanges();
         }
         public void insert(ThongTinDV ttdv)
-        {
+        {           
             db.ttDVs.Add(ttdv);
             db.SaveChanges();
         }

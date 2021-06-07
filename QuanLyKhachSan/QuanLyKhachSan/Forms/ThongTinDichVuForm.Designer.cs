@@ -59,10 +59,10 @@ namespace QuanLyKhachSan.Form
             // btnSave
             // 
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(98, 301);
+            this.btnSave.Location = new System.Drawing.Point(114, 370);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(81, 32);
+            this.btnSave.Size = new System.Drawing.Size(94, 39);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -70,10 +70,10 @@ namespace QuanLyKhachSan.Form
             // btnCancel
             // 
             this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(365, 301);
+            this.btnCancel.Location = new System.Drawing.Point(426, 370);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(82, 32);
+            this.btnCancel.Size = new System.Drawing.Size(96, 39);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -81,10 +81,10 @@ namespace QuanLyKhachSan.Form
             // btnUpdate
             // 
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(269, 301);
+            this.btnUpdate.Location = new System.Drawing.Point(314, 370);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(91, 32);
+            this.btnUpdate.Size = new System.Drawing.Size(106, 39);
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.Visible = false;
@@ -92,10 +92,10 @@ namespace QuanLyKhachSan.Form
             // btnInsert
             // 
             this.btnInsert.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.ImageOptions.Image")));
-            this.btnInsert.Location = new System.Drawing.Point(12, 301);
+            this.btnInsert.Location = new System.Drawing.Point(14, 370);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(81, 32);
+            this.btnInsert.Size = new System.Drawing.Size(94, 39);
             this.btnInsert.TabIndex = 8;
             this.btnInsert.Text = "Thêm";
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -103,10 +103,10 @@ namespace QuanLyKhachSan.Form
             // btnDelete
             // 
             this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(184, 301);
+            this.btnDelete.Location = new System.Drawing.Point(215, 370);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(81, 32);
+            this.btnDelete.Size = new System.Drawing.Size(94, 39);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -114,18 +114,18 @@ namespace QuanLyKhachSan.Form
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 62);
+            this.label2.Location = new System.Drawing.Point(30, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Công việc";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 23);
+            this.label1.Location = new System.Drawing.Point(30, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(55, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dịch vụ";
             // 
@@ -134,7 +134,6 @@ namespace QuanLyKhachSan.Form
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colDichVuId,
             this.colCongViecId});
-            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.grcDichVu;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.ReadOnly = true;
@@ -142,26 +141,30 @@ namespace QuanLyKhachSan.Form
             // colDichVuId
             // 
             this.colDichVuId.FieldName = "DichVuId";
+            this.colDichVuId.MinWidth = 23;
             this.colDichVuId.Name = "colDichVuId";
             this.colDichVuId.Visible = true;
             this.colDichVuId.VisibleIndex = 0;
+            this.colDichVuId.Width = 87;
             // 
             // colCongViecId
             // 
             this.colCongViecId.FieldName = "CongViecId";
+            this.colCongViecId.MinWidth = 23;
             this.colCongViecId.Name = "colCongViecId";
             this.colCongViecId.Visible = true;
             this.colCongViecId.VisibleIndex = 1;
+            this.colCongViecId.Width = 87;
             // 
             // grcDichVu
             // 
             this.grcDichVu.DataSource = this.thongTinDVBindingSource;
             this.grcDichVu.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grcDichVu.Location = new System.Drawing.Point(12, 120);
+            this.grcDichVu.Location = new System.Drawing.Point(14, 148);
             this.grcDichVu.MainView = this.gridView1;
             this.grcDichVu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grcDichVu.Name = "grcDichVu";
-            this.grcDichVu.Size = new System.Drawing.Size(435, 162);
+            this.grcDichVu.Size = new System.Drawing.Size(507, 199);
             this.grcDichVu.TabIndex = 3;
             this.grcDichVu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -176,10 +179,10 @@ namespace QuanLyKhachSan.Form
             this.panel1.Controls.Add(this.cmbDichVuId);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 11);
+            this.panel1.Location = new System.Drawing.Point(14, 14);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(435, 95);
+            this.panel1.Size = new System.Drawing.Size(507, 117);
             this.panel1.TabIndex = 4;
             // 
             // cmbCongViecId
@@ -188,9 +191,10 @@ namespace QuanLyKhachSan.Form
             this.cmbCongViecId.DataSource = this.congViecBindingSource;
             this.cmbCongViecId.DisplayMember = "TenCV";
             this.cmbCongViecId.FormattingEnabled = true;
-            this.cmbCongViecId.Location = new System.Drawing.Point(103, 59);
+            this.cmbCongViecId.Location = new System.Drawing.Point(120, 73);
+            this.cmbCongViecId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbCongViecId.Name = "cmbCongViecId";
-            this.cmbCongViecId.Size = new System.Drawing.Size(150, 21);
+            this.cmbCongViecId.Size = new System.Drawing.Size(174, 24);
             this.cmbCongViecId.TabIndex = 2;
             this.cmbCongViecId.ValueMember = "CongViecId";
             this.cmbCongViecId.SelectedIndexChanged += new System.EventHandler(this.cmbCongViecId_SelectedIndexChanged);
@@ -206,9 +210,10 @@ namespace QuanLyKhachSan.Form
             this.cmbDichVuId.DataSource = this.dichVuBindingSource;
             this.cmbDichVuId.DisplayMember = "TenDV";
             this.cmbDichVuId.FormattingEnabled = true;
-            this.cmbDichVuId.Location = new System.Drawing.Point(103, 20);
+            this.cmbDichVuId.Location = new System.Drawing.Point(120, 25);
+            this.cmbDichVuId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbDichVuId.Name = "cmbDichVuId";
-            this.cmbDichVuId.Size = new System.Drawing.Size(150, 21);
+            this.cmbDichVuId.Size = new System.Drawing.Size(174, 24);
             this.cmbDichVuId.TabIndex = 1;
             this.cmbDichVuId.ValueMember = "DichVuId";
             this.cmbDichVuId.SelectedValueChanged += new System.EventHandler(this.cmbDichVuId_SelectedValueChanged);
@@ -219,9 +224,9 @@ namespace QuanLyKhachSan.Form
             // 
             // ThongTinDichVuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 344);
+            this.ClientSize = new System.Drawing.Size(534, 423);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
@@ -229,6 +234,7 @@ namespace QuanLyKhachSan.Form
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grcDichVu);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ThongTinDichVuForm";
             this.Text = "ThongTinDichVuForm";
             this.Load += new System.EventHandler(this.ThongTinDichVuForm_Load);

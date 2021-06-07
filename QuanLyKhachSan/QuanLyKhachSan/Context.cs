@@ -32,7 +32,7 @@ namespace QuanLyKhachSan
                         {
                             cs.MapLeftKey("DichVuId");
                             cs.MapRightKey("CongViecId");
-                            cs.ToTable("ThongTinDV");
+                            cs.ToTable("ThongTinDVs");
                         });
             modelBuilder.Configurations.Add(new ThongTinDVMap());
             modelBuilder.Configurations.Add(new NhanVienMap());

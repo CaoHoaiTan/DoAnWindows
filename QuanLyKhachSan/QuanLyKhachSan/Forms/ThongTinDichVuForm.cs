@@ -73,12 +73,12 @@ namespace QuanLyKhachSan.Form
 
         private void cmbDichVuId_SelectedValueChanged(object sender, EventArgs e)
         {
-            btnDelete.Enabled = false;
+          //  btnDelete.Enabled = false;
         }
 
         private void cmbCongViecId_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btnDelete.Enabled = false;
+          //  btnDelete.Enabled = false;
         }
     }
 }
