@@ -23,7 +23,7 @@ namespace QuanLyKhachSan.Form
         {
             // TODO: This line of code loads data into the 'qLKhachSanDataSet.ThongTinDVs' table. You can move, or remove it, as needed.
             this.thongTinDVsTableAdapter.Fill(this.qLKhachSanDataSet.ThongTinDVs);
-            thongTinDVsBindingSource.DataSource = qLKhachSanDataSet;
+            thongTinDVsBindingSource.DataSource = qLKhachSanDataSet.ThongTinDVs;
             congViecBindingSource.DataSource = new CongViecModel().FindAll();
             dichVuBindingSource.DataSource = new DichVuModel().FindAll();
             //
@@ -79,18 +79,18 @@ namespace QuanLyKhachSan.Form
 
         private void cmbDichVuId_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (cmbDichVuId.SelectedValue != null)
-            {   // Lọc nhưng Công việc chưa có trong dịch vụ
-                congViecBindingSource.DataSource =
-                    new Context().congViecs.SqlQuery(
-                        "SELECT * " +
-                        "FROM CongViecs " +
-                        "WHERE (CongViecId NOT IN (SELECT CongViecId " +
-                                                  "FROM ThongTinDVs " +
-                                                  "WHERE DichVuId = @p0))",
-                        cmbDichVuId.SelectedValue.ToString()
-                        ).ToList();
-            }
+            //if (cmbDichVuId.SelectedValue != null)
+            //{   // Lọc nhưng Công việc chưa có trong dịch vụ
+            //    congViecBindingSource.DataSource =
+            //        new Context().congViecs.SqlQuery(
+            //            "SELECT * " +
+            //            "FROM CongViecs " +
+            //            "WHERE (CongViecId NOT IN (SELECT CongViecId " +
+            //                                      "FROM ThongTinDVs " +
+            //                                      "WHERE DichVuId = @p0))",
+            //            cmbDichVuId.SelectedValue.ToString()
+            //            ).ToList();
+            //}
         }
 
         private void cmbCongViecId_SelectedIndexChanged(object sender, EventArgs e)

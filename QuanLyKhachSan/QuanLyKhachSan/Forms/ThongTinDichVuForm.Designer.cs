@@ -140,6 +140,7 @@ namespace QuanLyKhachSan.Form
             this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.grcDichVu;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.ReadOnly = true;
             // 
             // colDichVuId
